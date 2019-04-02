@@ -85,25 +85,25 @@ public class FripperController : MonoBehaviour
             {
                 SetAngle(this.flickAngle);
                 //Debug.Log("画面左タップ");
-
-                if (myTouch.phase == TouchPhase.Ended && tag == "LeftFripperTag")//左タップを離した場合
-                {
-                    SetAngle(this.defaultAngle);
-                    //Debug.Log("画面左タップ離す");
-                }
             }
-
+            
+            if (myTouch.phase == TouchPhase.Ended && tag == "LeftFripperTag")//左タップを離した場合
+            {
+                SetAngle(this.defaultAngle);
+                //Debug.Log("画面左タップ離す");
+            }
+            
 
             if (myTouch.position.x > Screen.width * 0.5 && tag == "RightFripperTag")
             {
                 SetAngle(this.flickAngle);
                 //Debug.Log("画面右タップ");
+            }
 
-                if (myTouch.phase == TouchPhase.Ended && tag == "RightFripperTag")//右タップを離した場合
-                {
-                    SetAngle(this.defaultAngle);
-                    //Debug.Log("画面右タップ離す");
-                }
+            if (myTouch.phase == TouchPhase.Ended && tag == "RightFripperTag")//右タップを離した場合
+            {
+                SetAngle(this.defaultAngle);
+                //Debug.Log("画面右タップ離す");
             }
         }
     }
